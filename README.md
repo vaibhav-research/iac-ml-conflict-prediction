@@ -1,7 +1,5 @@
 # iac-ml-conflict-prediction
 
-# ConcurrencyGuard
-
 ⚡ **ConcurrencyGuard** is a machine learning framework for predicting and mitigating **concurrent modification conflicts** in Infrastructure-as-Code (IaC) systems.  
 It combines **sequence models (LSTM)** and **tree-based ensembles (Random Forest)** to detect potential conflicts before they escalate into costly runtime errors.
 
@@ -50,7 +48,7 @@ Visualizations:
 
 ### Why Synthetic?
 Currently, **no public datasets** exist for IaC concurrency conflicts.  
-To address this, ConcurrencyGuard provides a **synthetic data generator** that:
+To address this,it provides a **synthetic data generator** that:
 - Models **resource criticality** and **attribute sensitivity**
 - Simulates **user roles** (developer, operator, admin) with varying risk priors
 - Encodes **temporal concurrency windows** (multi-resource overlapping changes)
@@ -74,32 +72,40 @@ This design ensures **reproducibility** and offers a benchmark similar to how MN
 
 ### 1. Generate Synthetic Data
 ```bash
-python make_synthetic_iac.py
+python generate_data.py
+```
 2. Train & Evaluate Models
+```
 python train_and_evaluate_models.py \
   --csv synthetic_sequential_iac_data.csv \
   --window 32 --stride 8 \
   --folds 5 --batch 64 --epochs 150
+```
 Results (plots + metrics) will be saved under /results.
-🔬 Research Value
-Provides the first reproducible benchmark dataset for ML-based IaC concurrency management.
-Bridges the gap between systems engineering and applied machine learning.
-Offers a platform for future research on:
-Multi-agent reinforcement learning for IaC concurrency
-Graph-based models over resource dependency DAGs
-Real-time conflict prediction in CI/CD pipelines
-📖 Citation
+
+## 🔬 Research Value
+- Provides the first reproducible benchmark dataset for ML-based IaC concurrency management.
+- Bridges the gap between systems engineering and applied machine learning.
+- Offers a platform for future research on:
+- Multi-agent reinforcement learning for IaC concurrency
+- Graph-based models over resource dependency DAGs
+- Real-time conflict prediction in CI/CD pipelines
+
+## 📖 Citation
 If you use this project in academic work, please cite:
+```
 @misc{concurrencyguard2025,
   title={ConcurrencyGuard: ML-Driven Concurrency Conflict Prediction for Infrastructure-as-Code},
   author={Your Name},
   year={2025},
   howpublished={GitHub},
-  url={https://github.com/yourusername/concurrencyguard}
+  url={https://github.com/vaibhav-research/iac-ml-conflict-prediction}
 }
-🤝 Contributing
+```
+
+## 🤝 Contributing
 Pull requests are welcome!
 Please open issues for:
-Ideas on extending the synthetic generator
-Integrations with real-world IaC logs
-New ML architectures for concurrency detection
+- Ideas on extending the synthetic generator
+- Integrations with real-world IaC logs
+- New ML architectures for concurrency detection
