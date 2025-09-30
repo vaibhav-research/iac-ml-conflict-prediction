@@ -96,7 +96,7 @@ If you use this project in academic work, please cite:
 ```
 @misc{concurrencyguard2025,
   title={ConcurrencyGuard: ML-Driven Concurrency Conflict Prediction for Infrastructure-as-Code},
-  author={Your Name},
+  author={Vaibhav Pandey},
   year={2025},
   howpublished={GitHub},
   url={https://github.com/vaibhav-research/iac-ml-conflict-prediction}
