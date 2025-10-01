@@ -31,16 +31,6 @@ Visualizations:
 
 *(see `/results` folder for full plots)*
 
----
-
-## 📂 Project Structure
-
-.
-├── make_synthetic_iac.py # Synthetic IaC conflict data generator
-├── train_and_evaluate_models.py # Training + evaluation script
-├── synthetic_sequential_iac_data.csv # Generated dataset
-├── results/ # Evaluation plots and metrics
-└── README.md
 
 ---
 
