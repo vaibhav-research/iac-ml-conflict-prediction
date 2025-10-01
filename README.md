@@ -1,6 +1,6 @@
 # iac-ml-conflict-prediction
 
-⚡ **ConcurrencyGuard** is a machine learning framework for predicting and mitigating **concurrent modification conflicts** in Infrastructure-as-Code (IaC) systems.  
+⚡ This is a machine learning framework for predicting and mitigating **concurrent modification conflicts** in Infrastructure-as-Code (IaC) systems.  
 It combines **sequence models (LSTM)** and **tree-based ensembles (Random Forest)** to detect potential conflicts before they escalate into costly runtime errors.
 
 ---
